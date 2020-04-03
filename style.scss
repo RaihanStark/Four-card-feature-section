@@ -1,0 +1,131 @@
+// Config
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+$font-size-body: 15px;
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+$Very-Dark-Blue: hsl(234, 12%, 34%);
+$Grayish-Blue: hsl(229, 6%, 66%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
+$Size-Mobile: 375px;
+$Size-Desktop: 1440px;
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: $font-size-body;
+  background-color: $Very-Light-Gray;
+}
+
+header {
+  text-align: center;
+  margin-top: 1rem;
+  h1 {
+    margin: 0.1rem;
+
+    color: $Very-Dark-Blue;
+  }
+
+  #slogan {
+    color: $Grayish-Blue;
+  }
+}
+
+.text-light {
+  font-weight: 200;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-right {
+  justify-self: end;
+}
+
+.justify-left {
+  justify-self: start;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  -webkit-box-shadow: 0px 7px 21px 3px rgba(0, 0, 0, 0.062);
+  box-shadow: 0px 7px 21px 3px rgba(0, 0, 0, 0.062);
+  background-color: white;
+
+  padding: 2em;
+  margin: 2em 1em 2em 1em;
+
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  &.border-red {
+    border-top: 6px solid $Red;
+  }
+  &.border-blue {
+    border-top: 6px solid $Blue;
+  }
+  &.border-cyan {
+    border-top: 6px solid $Cyan !important;
+  }
+  &.border-orange {
+    border-top: 6px solid $Orange;
+  }
+  border-radius: 0.4em;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    color: $Grayish-Blue;
+    margin: 0 0 1rem 0;
+  }
+
+  img {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .col {
+    justify-self: center;
+  }
+
+  .card {
+    margin: 2em 0 0 0;
+  }
+}
+
+@media screen and (max-width: $Size-Mobile) {
+  header {
+    margin: 2em;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  .card {
+    margin: 2em 2em 0 2em;
+  }
+}
